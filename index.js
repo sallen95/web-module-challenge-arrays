@@ -30,6 +30,8 @@ var originalFlavors = ["Banana Nut Fudge",
     "Vanilla",
     "Vanilla Burnt Almond"]
 
+let test = ["black", "blue", "green"];
+
 /* Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
 
 (1) an array 
@@ -41,10 +43,19 @@ To save you from having to count the items above, you can assume that length of 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
 function is31Flavors(/*code here*/){
+    if (originalFlavors.length === 31){
+        return true;
+    } else {
+        return(false);
+    }
+    
 
-    /*code here*/
+}//function
 
-}
+is31Flavors();
+console.log(is31Flavors(originalFlavors));
+
+
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -59,9 +70,12 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 
 function addFlavor(/*code here*/){
 
-    /*code here*/
+    originalFlavors.unshift('Rainbow Sherbert');
 
 }
+
+addFlavor();
+console.log(originalFlavors);
 
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
@@ -76,9 +90,12 @@ For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", 
 
 function removeLastFlavor(/*code here*/){
 
-    /*code here*/
+    originalFlavors.pop();
 
 }
+
+removeLastFlavor();
+console.log(originalFlavors);
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
