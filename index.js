@@ -42,8 +42,8 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(/*code here*/){
-    if (originalFlavors.length === 31){
+function is31Flavors(arr){
+    if (arr.length === 31){
         return true;
     } else {
         return(false);
@@ -52,7 +52,6 @@ function is31Flavors(/*code here*/){
 
 }//function
 
-is31Flavors();
 console.log(is31Flavors(originalFlavors));
 
 
@@ -68,14 +67,13 @@ Your function should add the flavor to the front of the array and console.log th
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
-function addFlavor(/*code here*/){
+function addFlavor(arr, string){
 
-    originalFlavors.unshift('Rainbow Sherbert');
+    return arr.unshift(string);
 
 }
 
-addFlavor();
-console.log(originalFlavors);
+console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
@@ -88,14 +86,13 @@ Your function should remove a flavor from the end of the array and console.log t
 
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
 
-function removeLastFlavor(/*code here*/){
+function removeLastFlavor(arr){
 
-    originalFlavors.pop();
+    return arr.pop();
 
 }
 
-removeLastFlavor();
-console.log(originalFlavors);
+console.log(removeLastFlavor(originalFlavors));
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
